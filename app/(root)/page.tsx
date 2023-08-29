@@ -1,10 +1,13 @@
-import { Button } from "@/components/ui/button";
+"use client";
+import { Modal } from "@/components/ui/modal";
 
 const SatupPage =()=> {
     return (
         <div className="p-4">
-            <Button size="lg" variant="destructive">CLick</Button>
+        <Modal title="Test" description="Test Description" isOpen onClose={()=>{}}>
+        Children
+        </Modal>
       </div>
     )
   }
-  
+export default SatupPage;
