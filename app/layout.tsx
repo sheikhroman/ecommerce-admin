@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import { ModalProvider } from "@/provider/modal-provider";
-import { TosterProvider } from "@/provider/provider";
+import { TosterProvider } from "@/provider/toast-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 

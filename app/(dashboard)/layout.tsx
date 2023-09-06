@@ -29,6 +29,7 @@ export default async function DashboardLayout({
 
   return (
     <>
+      <div className="h-full">This is Navbar</div>
       {children}
     </>
   );
