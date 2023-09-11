@@ -33,9 +33,11 @@ export const StoreModal = () => {
     try {
       setLoading(true);
       const response = await axios.post('./api/stores', values);
-      window.location.assign(`/${response.data.id}`);
+      // window.location.assign(`/${response.data.id}`);
+      console.log(response.data)
     } catch (error) {
-      toast.error('Something went wrong');
+      // toast.error('Gusti Chodi');
+      console.log(error)
     } finally {
       setLoading(false);
     }
@@ -45,7 +47,7 @@ export const StoreModal = () => {
     <Modal
       title="Create store"
       description="Add a new stor to manage your products"
-      isOpen={StoreModal.isOpen}
+      isOpen={StoreModal.isOpen} 
       onClose={StoreModal.onClose}
     >
       <div className="">
@@ -62,7 +64,7 @@ export const StoreModal = () => {
                               </FormItem>
                           )} />
                           <div className="pt-6 space-x-2 flex items-center justify-end w-full">
-                              <Button disabled={loading} variant="output" onClick={StoreModal.onclose}>Cancel</Button>
+                              <Button disabled={loading} variant="outline" onClick={StoreModal.onClose}>Cancel</Button>
                               <Button disabled={loading} type="submit">Continue</Button>
                           </div>
                       </form>
