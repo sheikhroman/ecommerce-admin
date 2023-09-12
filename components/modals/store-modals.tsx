@@ -16,7 +16,7 @@ const formSchema = z.object({
   name: z.string().min(1),
 });
 export const StoreModal = () => {
-  const StoreModal = useStoreModal();
+  const storeModal = useStoreModal();
   
   const [loading, setLoading] = useState(false);
 
@@ -36,7 +36,7 @@ export const StoreModal = () => {
       window.location.assign(`/${response.data.id}`);
       console.log(response.data)
     } catch (error) {
-     toast.error('Gusti Chodi');
+      toast.error('Gusti Chodi');
       console.log(error)
     } finally {
       setLoading(false);
@@ -47,8 +47,8 @@ export const StoreModal = () => {
     <Modal
       title="Create store"
       description="Add a new stor to manage your products"
-      isOpen={StoreModal.isOpen} 
-      onClose={StoreModal.onClose}
+      isOpen={storeModal.isOpen} 
+      onClose={storeModal.onClose}
     >
       <div className="">
         <div className="space-y-4 py-2 pb-4">
@@ -64,7 +64,7 @@ export const StoreModal = () => {
                               </FormItem>
                           )} />
                           <div className="pt-6 space-x-2 flex items-center justify-end w-full">
-                              <Button disabled={loading} variant="outline" onClick={StoreModal.onClose}>Cancel</Button>
+                              <Button disabled={loading} variant="outline" onClick={storeModal.onClose}>Cancel</Button>
                               <Button disabled={loading} type="submit">Continue</Button>
                           </div>
                       </form>
