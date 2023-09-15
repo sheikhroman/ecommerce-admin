@@ -36,7 +36,7 @@ export const StoreModal = () => {
       window.location.assign(`/${response.data.id}`);
       console.log(response.data)
     } catch (error) {
-      toast.error('Gusti Chodi');
+      toast.error('Error Bro');
       console.log(error)
     } finally {
       setLoading(false);
