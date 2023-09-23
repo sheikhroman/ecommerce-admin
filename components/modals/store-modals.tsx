@@ -37,6 +37,7 @@ export const StoreModal = () => {
       toast.success('Store Created');
     } catch (error) {
       toast.error('Error Bro');
+      console.log(error)
     } finally {
       setLoading(false);
     }
