@@ -42,6 +42,7 @@ export const StoreModal = () => {
       setLoading(false);
     }
   };
+  //auth error again
 
   return (
     <Modal
